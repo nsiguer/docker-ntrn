@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mn-ntrn:
+    image: ntrn
+    container_name: mn-ntrn
+    build:
+      context: .
+    ports:
+      - 32001:32001/tcp
+    volumes:
+      - $PWD/.neutron:/root/.neutron 
